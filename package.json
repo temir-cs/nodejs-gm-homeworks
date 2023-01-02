@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-gm-homeworks",
+  "version": "1.0.0",
+  "description": "Homeworks for Node JS Global Mentoring Program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "task1": "npx nodemon task1",
+    "task2": "npx nodemon task2",
+    "build": "babel task1.js task2.js -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/temir-cs/nodejs-gm-homeworks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/temir-cs/nodejs-gm-homeworks/issues"
+  },
+  "homepage": "https://github.com/temir-cs/nodejs-gm-homeworks#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10"
+  }
+}
