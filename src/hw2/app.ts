@@ -16,6 +16,10 @@ const port = 3000;
 const users: User[] = [];
 const findUser = (id: string) => users.find((user) => user.id === id);
 
+app.get('/', (_req, res) => {
+    res.status(200).send('Welcome to Temirlan NodeJS GMP Homework 2 API!');
+})
+
 // Create new user
 app.post('/users', userValidator(), (req, res) => {
     const user: User = req.body;
@@ -76,6 +80,14 @@ app.delete('/users/:id', (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`App is running on port ${port}`);
-});
+try {
+    app.listen(port, () => {
+        console.log(`App server is running on http://localhost:${port}`);
+    });
+    
+} catch (err) {
+    if (err instanceof Error) {
+        console.error(`Error: ${err.message}`);
+    }
+    console.log('Error: unexpected error!');
+}
